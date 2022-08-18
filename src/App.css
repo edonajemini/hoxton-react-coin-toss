@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+#circle {
+  position: relative;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+.header {
+  margin:20px 50px;
+  padding: 1px; 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgba(217, 186, 208, 0.783);
+  color: white;
+}
+.main{
+  margin: 100px 500px;
+}
+.main h1{
+  color: gray;
+}
+#circle div {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius:50%;
+}
+.front-side{
+  background-color: palevioletred;
+  color: white;
+  text-align: center;
+}
+.back-side{
+  background-color: pink;
+  color: white;
+  text-align: center;
+}
+
+#circle {
+  transition: -webkit-transform 1s ease-in;
+  -webkit-transform-style: preserve-3d;
+}
+#circle div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+.front-side {
+  z-index: 100;
+}
+.back-side {
+  -webkit-transform: rotateY(-180deg);
+}
+
+#circle.heads {
+  -webkit-animation: flipHeads 2s ease-out forwards;
+  -moz-animation: flipHeads 2s ease-out forwards;
+  -o-animation: flipHeads 2s ease-out forwards;
+  animation: flipHeads 2s ease-out forwards;
+}
+#circle.tails {
+  -webkit-animation: flipTails 2s ease-out forwards;
+  -moz-animation: flipTails 2s ease-out forwards;
+  -o-animation: flipTails 2s ease-out forwards;
+  animation: flipTails 2s ease-out forwards;
+}
+
